@@ -8,10 +8,13 @@
 }
 
 h1 {
+  color: #fff;
+  font-size: 4.375rem;
+  line-height: 64px;
   font-size: 50px;
   line-height: 64px;
-  color: #fff;
-}
+  color: #fff;}
+
 h2 {
   font-size: 46px;
   line-height: 54px;
@@ -25,6 +28,7 @@ h6 {
   font-weight: 700;
   font-size: 12px;
 }
+
 p {
   font-size: 16px;
   color: #000;
@@ -47,32 +51,62 @@ body {
   width: 100%;
   background-color: #fff;
 }
-main {
+
+/*------ -------------------------------
+Header Css Start 
+----------------------------------------- */
+.header-section{
+  background-color: #161616;
   display: flex;
-
   justify-content: center;
-}
-
-
-/* ---------------------
-     hero Section        
- ----------------------- */
-#hero {
-  background-image: url("img/banner1.png");
-  height: 90vh;
   width: 90%;
-  margin-top: 30px;
-  background-size: cover;
-  padding: 0 80px;
-  background-position: top 25% right 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  border-radius: 15px;
+  border-radius: 30px;
+  margin-left: 5%;
+  margin-top: 50px;
+  align-items: center;
 }
-
-#hero .hero-details h1 {
+.header-info{
+  width: 45%;
+}
+.header-info h1{
+  color: #fff;
+  font-size: 4.375rem;
+}
+.header-info p{
+  color: #fff;
+  font-size: 18px;
+  margin-top: 20px;
+  width: 90%;
+}
+.header-info a{
+  padding: 16px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  background-color: #74ACDF;
+  display: inline-block;
+  margin-top:30px ;
+  transition-property: color, padding;
+  transition-duration: 0.5s;
+}
+.header-info a:hover{
+  padding: 16px 35px;
+  background-color: #7F1431;
+}
+.header-img{
+  width: 45%;
+}
+.header-img img{
+  width: 100%;
+  padding-top: 30px;
+  margin-bottom: -4px;
+  transition: transform ease-out 1s;
+}
+.header-img img:hover{
+  transform: translateX(30px);
+}
+details h1 {
   width: 531px;
   height: 240px;
   font-weight: 700;
@@ -80,35 +114,6 @@ main {
   line-height: 80px;
   color: #ffffff;
 }
-#hero .hero-details p {
-  width: 531px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  color: #ffffff;
-  margin-top: 10px;
-}
-#hero .hero-details button {
-  margin-top: 30px;
-  background-color: #b51024;
-  color: #fff;
-  padding: 16px 25px;
-  font-size: 18px;
-  line-height: 23.46px;
-}
-#hero .hero-details button:hover {
-  color: #8C52FF;
-  background-color: #fff;
-  font-size: 19px;
-  border-radius: 50px;
-}
-#hero .hero-details button i {
-  margin-left: 10px;
-}
-
-/* <!-- -------------------
-     MATCH Section 
-  --------------------> */
 
 #match {
   margin: 50px 80px;
@@ -292,9 +297,6 @@ footer .follow i:hover {
 -----------------------------   */
 
 
-
-
-
 /* Tablet Screen */
 
 @media (max-width: 1023px) {
@@ -372,36 +374,33 @@ footer .follow i:hover {
 }
 
 /* Mobile Screen */
-@media (max-width: 767px) {
-  #hero {
-    width: 100%;
-    padding: 0 0px;
-    background-position: top 5% right 35%;
+@media only screen and (max-width: 600px) {
+  .header-section{
+      background-color: #161616;
+      display: block;
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
   }
-
-  #hero .hero-details h1 {
-    width: 300px;
-    height: auto;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: auto;
+  /* Banner Text */
+  .header-info {
+      width: 100%;
+      text-align: center;
   }
-  #hero .hero-details p {
-    width: 331px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 26px;
-    color: #ffffff;
-    margin-top: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .header-info h1 {
+      color: #fff;
+      font-size: 3rem;
+      padding-top: 50px;
   }
-
-  #hero .hero-details button {
-    color: #fff;
-    padding: 13px 20px;
-    font-size: 15px;
+  .header-info p {
+      color: #fff;
+      font-size: 18px;
+      margin-top: 20px;
+      padding: 0 20px;
+  }
+  /* Banner Img */
+  .header-img {
+      width: 100%;
   }
   #match .match-box {
     border-radius: 10px;
